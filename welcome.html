@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome screen</title>
+</head>
+<style>
+    *{
+        background-color: rgb(200, 141, 141);
+    }
+  
+    .screen{
+        margin-left: 550px;
+         height: 100px;
+        width: 300px;
+        font-family: "Bauhaus 93";
+        background-color:rgb(33, 154, 241);
+        color: blanchedalmond;
+        font-size: 35px;
+        cursor: pointer;
+        border-radius: 12px;
+        margin-top: 10px;
+    }
+    img{
+       height:500px ;
+       width: 400px;
+       margin-left: 500px;
+    }
+    .cssmarquee {
+height: 50px;
+overflow: hidden;
+position: relative;
+}
+.cssmarquee h1 {
+font-size: 2em;
+color: rgb(6, 30, 27);
+position: absolute;
+width: 100%;
+height: 100%;
+margin: 0;
+line-height: 50px;
+text-align: center;
+transform:translateX(100%);
+animation: cssmarquee 15s linear infinite;
+}
+@keyframes cssmarquee {
+0% {
+transform: translateX(100%);
+}
+100% {
+transform: translateX(-100%);
+}
+}
+</style>
+<body>
+
+
+<div class="cssmarquee">
+    <h1> Welcome There’s no such thing as a vote that doesn’t matter. It all matters.</h1>
+</div>
+
+<input class="screen"  type="button" name="nextscreen" value="click to vote" onClick="location.href = 'http://localhost:8080/voting%20project/desb.php'" ><br>
+<img src="vv.jpg" alt="" >
+</body>
+</html>

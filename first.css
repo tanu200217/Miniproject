@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    color: black;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,rgb(156, 156, 222),rgb(133, 218, 198));
+    padding: 10px;
+}
+.container{
+    max-width: 800px;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 25px;
+    background: linear-gradient(135deg,rgb(144, 206, 144),rgb(167, 167, 243));
+}
+.container .heading{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    text-align: center;
+    padding: 0 0 20px 0;
+}
+.container .heading::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(135deg,rgb(145, 204, 204),rgb(157, 199, 140));
+}
+.container form .det{
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+form .det .box{
+    width: calc(100% /2 -20px);
+    margin-bottom: 15px;
+}
+.det .box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom:5px ;
+}
+.det .box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding-left:15px ;
+    font-size: 16px;
+    border-bottom-width:2px ;
+    transition: all 0.3s ease;
+}
+.det .box input:focus,.det.box input:valid{
+    border-color: rgb(192, 164, 217);
+}
+form .form .category{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+form .button{
+    text-align: center;
+}
+form .button input{
+    padding: 10px 0;
+    margin-top: 10px;
+    height: 100%;
+    width: 100px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius:5px ;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg,rgb(180, 151, 222) rgb(222, 131, 131));
+    cursor: pointer;
+}
+form .button input:hover{
+    background: linear-gradient(-135deg,rgb(187, 147, 244) rgb(128, 220, 179));
+}
+
+
+
+@media(max-width:584px){
+    .container{
+        max-width: 100%;
+    }
+    form .det .box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    form .form .category{
+        width: 100%;
+    }
+    .container form .det{
+        max-height: 300px;
+        overflow: scroll;
+    }
+    .det::-webkit-scrollbar{
+        width: 0;
+    }
+}
